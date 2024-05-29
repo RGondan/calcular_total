@@ -1,5 +1,5 @@
 function minusAmount(){
-    var element = document.getElementById("amount");
+    var element =  document.querySelector("#amount")
     var amount = parseInt(element.innerText);
     amount -= 1;
     if (amount < 0) {
@@ -10,7 +10,7 @@ function minusAmount(){
 }
 
 function plusAmount(){
-    var element = document.getElementById("amount");
+    var element =  document.querySelector("#amount")
     var amount = parseInt(element.innerText);
     amount += 1;
     element.innerText = amount;
@@ -18,10 +18,12 @@ function plusAmount(){
 }
 
 function calculateTotal(){
-    var amount = parseInt(document.getElementById("amount").innerText);
-    var price = parseInt(document.getElementById("price").innerText);
+    var amount_element =  document.querySelector("#amount")
+    var amount = parseInt(amount_element.innerText);
+    var price_element =  document.querySelector("#price")
+    var price = parseInt(price_element.innerText);
 
-    var element = document.getElementById("total");
     var total = price * amount;
-    element.innerText = total;
+    var total_element =  document.querySelector("#total")
+    total_element.innerText = total;
 }
