@@ -1,3 +1,13 @@
+const precio = 400000
+let cantidad = 0
+
+document.onload = init();
+
+function init() {
+    document.querySelector("#amount").innerText = cantidad
+    document.querySelector("#price").innerText = precio
+}
+
 function minusAmount(){
     const element =  document.querySelector("#amount")
     let amount = parseInt(element.innerText);
